@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/egg"
+        android:layout_width="328dp"
+        android:layout_height="506dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="Egg in which timer working"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/egg" />
+
+    <TextView
+        android:id="@+id/madeby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:paddingStart="3dp"
+        android:paddingEnd="13dp"
+        android:text="MADE BY KAPIL VERMA"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPanel"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/white"
+        android:onClick="btn"
+        android:text="START"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/egg"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="@id/egg"
+        app:layout_constraintRight_toRightOf="@id/egg"
+        app:layout_constraintTop_toTopOf="@id/egg"
+        app:layout_constraintVertical_bias="0.778" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="850px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/madeby" />
+
+    <TextView
+        android:id="@+id/time"
+        app:layout_constraintRight_toRightOf="@id/egg"
+        app:layout_constraintLeft_toLeftOf="@id/egg"
+        app:layout_constraintTop_toTopOf="@id/egg"
+        app:layout_constraintBottom_toBottomOf="@id/egg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:30"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="392dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
